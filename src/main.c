@@ -15,7 +15,7 @@ int main(void)
 {
    int ret = 0;
    // Check if the GPIO device is ready
-   if (!gpio_is_ready_dt(&led0) or !gpio_is_ready_dt(&led1) or gpio_is_ready_dt(&button))
+   if (!gpio_is_ready_dt(&led0) || !gpio_is_ready_dt(&led1) || gpio_is_ready_dt(&button))
    {
          return -1;
    }
