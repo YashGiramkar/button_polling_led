@@ -15,19 +15,19 @@ int main(void)
 {
    int ret = 0;
    // Check if the GPIO device is ready
-   if (!gpio_is_ready_dt(&led0) || !gpio_is_ready_dt(&led1) || gpio_is_ready_dt(&button))
-   {
-         return -1;
-   }
+   // if (!gpio_is_ready_dt(&led0) || !gpio_is_ready_dt(&led1) || gpio_is_ready_dt(&button))
+   // {
+   //       return -1;
+   // }
 
    ret = gpio_pin_configure_dt(&led0, GPIO_OUTPUT_ACTIVE);
    ret |= gpio_pin_configure_dt(&led1, GPIO_OUTPUT_ACTIVE);
    ret |= gpio_pin_configure_dt(&button, GPIO_INPUT);
 
-   if(ret<0)
-   {
-      return -1;
-   }
+   // if(ret<0)
+   // {
+   //    return -1;
+   // }
 
    while (1)
    {
